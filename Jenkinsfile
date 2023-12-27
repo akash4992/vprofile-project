@@ -98,7 +98,6 @@ pipeline {
             }
         }
         stage('Kubernetes Deploy') {
-	  agent { label 'KOPS' }
             steps {
                     withKubeConfig([credentialsId: 'k8s', serverUrl: '']) {
 
